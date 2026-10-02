@@ -424,6 +424,11 @@ section[id] {
 }
 
 .gate-screen {
+  --theme-primary: #e7a898;
+  --theme-secondary: #c98980;
+  --theme-soft: #f8e6e1;
+  --theme-glow: #e7a898;
+  --theme-background-accent: #fbf4f1;
   position: fixed;
   inset: 0;
   z-index: 90;
