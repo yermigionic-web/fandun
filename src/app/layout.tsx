@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Newsreader, Outfit } from "next/font/google";
 import Script from "next/script";
 import { EnteringToast } from "@/components/effects/EnteringToast";
+import { ImageGate } from "@/components/layout/ImageGate";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeStyle } from "@/components/layout/ThemeStyle";
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeStyle />
         <Script id="fandun-theme-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
         <ThemeProvider>
+          <ImageGate />
           <a
             href="#content"
             className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-white focus:px-4 focus:py-2"
