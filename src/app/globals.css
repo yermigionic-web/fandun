@@ -434,10 +434,10 @@ section[id] {
   z-index: 90;
   display: grid;
   place-items: center;
-  background-color: var(--color-cream);
+  background-color: #f3efe8;
   background-image:
-    radial-gradient(680px 420px at 50% 46%, color-mix(in srgb, var(--theme-glow) 42%, transparent), transparent 70%),
-    radial-gradient(520px 380px at 50% 62%, color-mix(in srgb, var(--theme-background-accent) 88%, white), transparent 74%);
+    radial-gradient(680px 420px at 50% 46%, rgb(231 168 152 / 42%), transparent 70%),
+    radial-gradient(520px 380px at 50% 62%, #fbf4f1, transparent 74%);
 }
 
 .gate-screen.is-open {

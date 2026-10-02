@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 
 export function RuneRing({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 100 100" className={cn("text-current", className)} aria-hidden="true">
+    <svg viewBox="0 0 100 100" width="100" height="100" className={cn("text-current", className)} aria-hidden="true">
       <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" strokeWidth="1.2" />
       <circle cx="50" cy="50" r="27" fill="none" stroke="currentColor" strokeWidth="0.7" strokeDasharray="2 3" />
       {Array.from({ length: 8 }, (_, index) => {
