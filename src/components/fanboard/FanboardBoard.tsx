@@ -1,14 +1,20 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { FanboardPostCard } from "@/components/fanboard/FanboardPostCard";
 import { fanboardCategories, fanboardPosts } from "@/data/fanboardPosts";
 import { cn } from "@/lib/cn";
 import type { FanboardCategory } from "@/types";
 
-export function FanboardBoard({ initialTag }: { initialTag?: string }) {
+export function FanboardBoard() {
+  const queryTag = useSearchParams().get("tag") ?? "";
   const [category, setCategory] = useState<FanboardCategory | "ALL">("ALL");
-  const [tag, setTag] = useState(initialTag ?? "");
+  const [tag, setTag] = useState(queryTag);
+
+  useEffect(() => {
+    setTag(queryTag);
+  }, [queryTag]);
   const posts = useMemo(
     () =>
       fanboardPosts.filter((post) => {
