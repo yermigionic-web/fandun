@@ -8,6 +8,7 @@ import { RankBadge } from "@/components/hunter/RankBadge";
 import { MediaFrame } from "@/components/ui/MediaFrame";
 import { useHunterTheme } from "@/context/ThemeProvider";
 import { getOrganization } from "@/data/organizations";
+import { pickCardImage } from "@/data/pickCards";
 import { cn } from "@/lib/cn";
 import type { Hunter } from "@/types";
 
@@ -49,12 +50,12 @@ export function HunterCard({ hunter, variant = "profile" }: { hunter: Hunter; va
 
   const visual = (
     <MediaFrame
-      src={variant === "picker" ? hunter.images.standing : hunter.images.profile}
+      src={variant === "picker" ? (pickCardImage(hunter.assetPrefix) ?? hunter.images.standing) : hunter.images.profile}
       alt=""
       monogram={hunter.monogram}
       silhouette={variant === "picker" ? hunter.silhouette : undefined}
       tone={hunter.theme}
-      align={variant === "picker" ? "bottom" : "center"}
+      align="center"
       className={variant === "picker" ? "aspect-[3/4] w-full" : "aspect-square w-full"}
     />
   );

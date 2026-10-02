@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RuneCorner } from "@/components/effects/RuneCorner";
 import { Silhouette } from "@/components/hunter/Silhouette";
 import { cn } from "@/lib/cn";
@@ -30,7 +30,14 @@ export function MediaFrame({
   peek?: boolean;
 }) {
   const [status, setStatus] = useState<"loading" | "loaded" | "missing">(src ? "loading" : "missing");
+  const imgRef = useRef<HTMLImageElement>(null);
   const showArt = status !== "loaded";
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!src || !img?.complete) return;
+    setStatus(img.naturalWidth > 0 ? "loaded" : "missing");
+  }, [src]);
 
   return (
     <div
@@ -53,6 +60,7 @@ export function MediaFrame({
         // Transparent PNG cutouts need a plain img so a missing file can fall back without cropping.
         // eslint-disable-next-line @next/next/no-img-element
         <img
+          ref={imgRef}
           src={src}
           alt={status === "loaded" ? alt : ""}
           loading={eager ? "eager" : "lazy"}

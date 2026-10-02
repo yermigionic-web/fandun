@@ -49,7 +49,7 @@ export default async function HunterDetailPage({ params }: Props) {
         ← Hunters
       </Link>
       <header className="surface mt-4 overflow-hidden">
-        <MediaFrame src={hunter.images.header} alt="" monogram={hunter.monogram} tone={hunter.theme} className="aspect-[16/7] w-full" />
+        <MediaFrame src={hunter.images.header} alt="" monogram={hunter.monogram} tone={hunter.theme} fit="cover" className="aspect-[3/2] w-full" />
         <div className="grid gap-6 p-5 md:grid-cols-[240px_1fr] md:p-8">
           <MediaFrame
             src={hunter.images.standing}

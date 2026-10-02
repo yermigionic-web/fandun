@@ -78,6 +78,7 @@ export type Hunter = {
     thumb: string;
     header: string;
     poster: string;
+    interview: string;
   };
 };
 

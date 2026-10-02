@@ -58,12 +58,12 @@ export default async function CoverArticlePage({ params }: Props) {
         <p className="mt-8 text-base leading-8">{story.intro}</p>
         <figure className="my-10">
           <MediaFrame
-            src={hunter.images.standing}
-            alt={`${hunter.nameKo} 초상`}
-            silhouette={hunter.silhouette}
+            src={hunter.images.interview}
+            alt={`${hunter.nameKo} 인터뷰`}
+            monogram={hunter.monogram}
             tone={hunter.theme}
-            align="bottom"
-            className="aspect-[3/4] w-full rounded-[28px] md:aspect-[16/10]"
+            fit="cover"
+            className="aspect-[3/2] w-full rounded-[28px]"
           />
           <figcaption className="mt-3 text-sm text-muted">{story.portraitCaption}</figcaption>
         </figure>

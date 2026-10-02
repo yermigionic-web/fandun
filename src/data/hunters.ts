@@ -1,4 +1,6 @@
 import { magazineSrc } from "@/data/eventAssets";
+import { heroStandingSrc } from "@/data/heroImages";
+import { fanboardSrc, headerSrc, interviewSrc, profileSrc } from "@/data/sceneImages";
 import { hunterIds, type Hunter, type HunterId, type HunterTheme } from "@/types";
 
 const affiliations = {
@@ -13,11 +15,12 @@ const affiliations = {
 
 function images(id: HunterId, poster: string): Hunter["images"] {
   return {
-    standing: `/images/hunters/${id}/standing/main.png`,
-    profile: `/images/hunters/${id}/profile/face.png`,
-    thumb: `/images/hunters/${id}/profile/thumb.png`,
-    header: `/images/hunters/${id}/profile/header.png`,
+    standing: heroStandingSrc[id],
+    profile: profileSrc[id],
+    thumb: fanboardSrc[id],
+    header: headerSrc[id],
     poster,
+    interview: interviewSrc[id],
   };
 }
 
