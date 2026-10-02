@@ -80,7 +80,7 @@ export function GalleryLightbox({
           )}
           <div className="px-2 pb-2 pt-4">
             <p className="text-lg font-semibold">{item.title}</p>
-            {item.caption ? <p className="mt-1 text-sm leading-relaxed text-muted">{item.caption}</p> : null}
+            {item.caption ? <p className="mt-1 whitespace-pre-line text-sm leading-relaxed text-muted">{item.caption}</p> : null}
             <Link href={`/hunters/${hunter.id}`} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold">
               {hunter.nameKo} 프로필
             </Link>

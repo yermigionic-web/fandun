@@ -67,7 +67,18 @@ export default async function HunterDetailPage({ params }: Props) {
             <h1 className="mt-4 text-4xl font-semibold tracking-tight">{hunter.nameKo}</h1>
             <p className="mt-1 text-muted">{hunter.nameEn}</p>
             <p className="mt-4 text-lg">{hunter.tagline}</p>
-            <p className="mt-2 text-sm text-muted">팬덤 네임 · {hunter.fandomName}</p>
+            <p className="mt-2 text-sm">
+              <span className="text-muted">팬덤 네임 · </span>
+              <span className="font-semibold">{hunter.fandomName}</span>
+            </p>
+            {hunter.fandomNote ? (
+              <p
+                className="mt-1.5 max-w-2xl text-sm leading-relaxed"
+                style={{ color: `color-mix(in srgb, ${hunter.theme.secondary} 72%, var(--color-ink) 28%)` }}
+              >
+                {hunter.fandomNote}
+              </p>
+            ) : null}
             <div className="mt-6">
               <FavoriteButton hunterId={hunter.id} />
             </div>
@@ -104,7 +115,7 @@ export default async function HunterDetailPage({ params }: Props) {
           {moments.map((moment) => (
             <article key={moment.title} className="surface p-5">
               <h3 className="font-semibold">{moment.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{moment.body}</p>
+              <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted">{moment.body}</p>
             </article>
           ))}
         </div>

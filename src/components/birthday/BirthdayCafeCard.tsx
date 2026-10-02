@@ -42,7 +42,7 @@ export function BirthdayCafeCard({ event }: { event: BirthdayCafeEvent }) {
             </li>
           ))}
         </ul>
-        {event.note ? <p className="text-sm leading-relaxed text-muted">{event.note}</p> : null}
+        {event.note ? <p className="whitespace-pre-line text-sm leading-relaxed text-muted">{event.note}</p> : null}
         <div className="flex flex-wrap gap-2 pt-1">
           <Link href={`/hunters/${hunter.id}`} className="inline-flex min-h-11 items-center rounded-full bg-white/80 px-4 text-sm font-semibold">
             헌터 보기

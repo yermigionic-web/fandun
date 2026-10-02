@@ -30,7 +30,7 @@ export function FanboardPostCard({ post }: { post: FanboardPost }) {
         </p>
       ) : null}
       <h3 className={organization ? "mt-2 text-lg font-semibold leading-snug" : "mt-3 text-lg font-semibold leading-snug"}>{post.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{post.excerpt}</p>
+      <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted">{post.excerpt}</p>
       {hunter ? (
         <MediaFrame src={hunter.images.thumb} alt="" monogram={hunter.monogram} tone={hunter.theme} fit="cover" className="mt-4 aspect-[3/2] w-full rounded-[20px]" />
       ) : null}

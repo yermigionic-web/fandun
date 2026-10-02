@@ -51,11 +51,11 @@ export default async function CoverArticlePage({ params }: Props) {
           eager
         />
         <h1 className="mt-10 font-editorial text-5xl font-medium italic leading-[0.95] md:text-7xl">{story.title}</h1>
-        <p className="mt-5 font-editorial text-xl leading-relaxed text-muted">{story.deck}</p>
+        <p className="mt-5 whitespace-pre-line font-editorial text-xl leading-relaxed text-muted">{story.deck}</p>
         <p className="mt-3 text-sm font-semibold">
           {hunter.nameKo} <span className="font-normal text-muted">{hunter.nameEn}</span>
         </p>
-        <p className="mt-8 text-base leading-8">{story.intro}</p>
+        <p className="mt-8 whitespace-pre-line text-base leading-8">{story.intro}</p>
         <figure className="my-10">
           <MediaFrame
             src={hunter.images.interview}
@@ -65,7 +65,7 @@ export default async function CoverArticlePage({ params }: Props) {
             fit="cover"
             className="aspect-[3/2] w-full rounded-[28px]"
           />
-          <figcaption className="mt-3 text-sm text-muted">{story.portraitCaption}</figcaption>
+          <figcaption className="mt-3 whitespace-pre-line text-sm leading-relaxed text-muted">{story.portraitCaption}</figcaption>
         </figure>
         <div className="space-y-8">
           {story.qa.map((pair) => (
@@ -73,11 +73,12 @@ export default async function CoverArticlePage({ params }: Props) {
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-soft text-xs font-semibold">Q</span>
               <div>
                 <p className="font-medium leading-relaxed">{pair.q}</p>
-                <p className="mt-2 leading-relaxed text-muted">{pair.a}</p>
+                <p className="mt-2 whitespace-pre-line leading-relaxed text-muted">{pair.a}</p>
               </div>
             </div>
           ))}
         </div>
+        {story.outro ? <p className="mt-10 whitespace-pre-line text-base leading-8">{story.outro}</p> : null}
         <PullQuote quote={story.pullQuote} />
         <aside className="surface flex items-center gap-4 p-4">
           <MediaFrame src={hunter.images.profile} alt="" monogram={hunter.monogram} tone={hunter.theme} className="h-16 w-16 shrink-0 rounded-2xl" />

@@ -67,6 +67,7 @@ export type Hunter = {
   monogram: string;
   silhouette: SilhouetteVariant;
   fandomName: string;
+  fandomNote?: string;
   tagline: string;
   description: string;
   statusLine: string;
@@ -178,6 +179,7 @@ export type CoverStory = {
   intro: string;
   pullQuote: string;
   portraitCaption: string;
+  outro?: string;
   qa: { q: string; a: string }[];
 };
 

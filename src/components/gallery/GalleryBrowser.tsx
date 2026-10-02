@@ -125,7 +125,7 @@ export function GalleryBrowser({ gallery, items }: { gallery: Gallery; items: Ga
                   {gallery.mood !== "polaroid" ? (
                     <span className="mt-3 block">
                       <span className={cn("block font-semibold", gallery.mood === "editorial" && "font-editorial text-xl italic")}>{item.title}</span>
-                      {item.caption ? <span className="mt-1 block text-sm text-muted">{item.caption}</span> : null}
+                      {item.caption ? <span className="mt-1 block whitespace-pre-line text-sm text-muted">{item.caption}</span> : null}
                     </span>
                   ) : null}
                 </button>

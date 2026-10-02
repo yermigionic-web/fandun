@@ -145,7 +145,7 @@ export function BinderGrid() {
             <PhotocardFace card={active} hunter={activeHunter} locked={!activeOwned} flipped={flipped} />
             <div className="mt-4 space-y-2 text-center">
               <p className="font-semibold">{activeOwned ? active.title : "아직 이 슬롯의 카드를 만나지 못했어요."}</p>
-              <p className="text-sm text-muted">{activeOwned ? active.flavor : "포토팩에서 만날 수 있어요."}</p>
+              <p className="whitespace-pre-line text-sm text-muted">{activeOwned ? active.flavor : "포토팩에서 만날 수 있어요."}</p>
               <div className="flex flex-wrap justify-center gap-2 pt-2">
                 <Button variant="soft" onClick={() => setFlipped((value) => !value)}>
                   {flipped ? "앞면" : "뒷면 보기"}
