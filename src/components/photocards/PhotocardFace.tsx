@@ -9,6 +9,7 @@ const rarityClass = {
   RARE: "bg-primary text-ink",
   SPECIAL: "bg-[#f4e4bc] text-ink",
   "50K LIMITED": "bg-[linear-gradient(100deg,#f7d5e3,#f6e7c1_55%,#e4eaf6)] text-ink",
+  "100K LIMITED": "bg-[linear-gradient(100deg,#ead6fc,#fbe3ea_55%,#f9edcf)] text-ink",
 } as const;
 
 const raritySkin = {
@@ -16,6 +17,7 @@ const raritySkin = {
   RARE: "rarity-skin-rare",
   SPECIAL: "rarity-skin-special",
   "50K LIMITED": "rarity-skin-limited",
+  "100K LIMITED": "rarity-skin-limited",
 } as const;
 
 export function RarityMark({ rarity, className }: { rarity: Photocard["rarity"]; className?: string }) {
