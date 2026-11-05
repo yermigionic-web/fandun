@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { RuneRing } from "@/components/effects/RuneRing";
 import { SparkleBurst } from "@/components/effects/SparkleBurst";
 import { PhotocardFace, RarityMark } from "@/components/photocards/PhotocardFace";
@@ -23,26 +23,37 @@ export function PhotocardPack() {
   const [card, setCard] = useState<Photocard | null>(null);
   const [isNew, setIsNew] = useState(false);
   const [toast, setToast] = useState(false);
+  const openingRef = useRef(false);
   const owned = mounted ? ids.length : null;
   const progress = owned === null ? 0 : (owned / photocards.length) * 100;
   const hunter = card ? getHunter(card.hunterId) : undefined;
 
   const open = () => {
-    if (phase === "opening") return;
+    if (openingRef.current || phase === "opening") return;
+    openingRef.current = true;
     const next = drawPhotocard();
-    const fresh = addToBinder(next.id);
+    let fresh = false;
+    try {
+      fresh = addToBinder(next.id);
+    } catch {
+      // Storage may be unavailable in private browsing or restricted contexts.
+      // Still reveal the drawn card rather than crashing the entire page.
+      fresh = false;
+    }
     setCard(next);
     setIsNew(fresh);
     setToast(false);
     if (prefersReducedMotion()) {
       setPhase("revealed");
       setToast(fresh);
+      openingRef.current = false;
       return;
     }
     setPhase("opening");
     window.setTimeout(() => {
       setPhase("revealed");
       setToast(fresh);
+      openingRef.current = false;
     }, 680);
   };
 
