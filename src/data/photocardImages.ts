@@ -37,18 +37,28 @@ import yeoreumLimited from "../../assets/photo-cards/yeoreum_pc_limited.png";
 import yeoreumProfile from "../../assets/photo-cards/yeoreum_pc_profile.png";
 import yeoreumSpecial from "../../assets/photo-cards/yeoreum_pc_special.png";
 
+import haesolWedding from "../../assets/photo-cards/haesol-pc-wedding.png";
+import danWedding from "../../assets/photo-cards/dan-pc-wedding.png";
+import soraWedding from "../../assets/photo-cards/sora-pc-wedding.png";
+import miroWedding from "../../assets/photo-cards/miro-pc-wedding.png";
+import yeoreumWedding from "../../assets/photo-cards/yeoreum-pc-wedding.png";
+import bokWedding from "../../assets/photo-cards/bok-pc-wedding.png";
+import minwonWedding from "../../assets/photo-cards/minwon-pc-wedding.png";
+import nagyeongWedding from "../../assets/photo-cards/nakyung-pc-wedding.png";
+import dahaeWedding from "../../assets/photo-cards/dahae-pc-wedding.png";
+
 function url(image: StaticImageData) {
   return image.src;
 }
 
-export const photocardSrc: Record<HunterId, { profile: string; casual: string; special: string; limited: string }> = {
-  haesol: { profile: url(haesolProfile), casual: url(haesolCasual), special: url(haesolSpecial), limited: url(haesolLimited) },
-  dan: { profile: url(danProfile), casual: url(danCasual), special: url(danSpecial), limited: url(danLimited) },
-  sora: { profile: url(soraProfile), casual: url(soraCasual), special: url(soraSpecial), limited: url(soraLimited) },
-  miro: { profile: url(miroProfile), casual: url(miroCasual), special: url(miroSpecial), limited: url(miroLimited) },
-  yeoreum: { profile: url(yeoreumProfile), casual: url(yeoreumCasual), special: url(yeoreumSpecial), limited: url(yeoreumLimited) },
-  bok: { profile: url(bokProfile), casual: url(bokCasual), special: url(bokSpecial), limited: url(bokLimited) },
-  minwon: { profile: url(minwonProfile), casual: url(minwonCasual), special: url(minwonSpecial), limited: url(minwonLimited) },
-  nagyeong: { profile: url(nakyungProfile), casual: url(nakyungCasual), special: url(nakyungSpecial), limited: url(nakyungLimited) },
-  dahae: { profile: url(dahaeProfile), casual: url(dahaeCasual), special: url(dahaeSpecial), limited: url(dahaeLimited) },
+export const photocardSrc: Record<HunterId, { profile: string; casual: string; special: string; limited: string; wedding: string }> = {
+  haesol: { profile: url(haesolProfile), casual: url(haesolCasual), special: url(haesolSpecial), limited: url(haesolLimited), wedding: url(haesolWedding) },
+  dan: { profile: url(danProfile), casual: url(danCasual), special: url(danSpecial), limited: url(danLimited), wedding: url(danWedding) },
+  sora: { profile: url(soraProfile), casual: url(soraCasual), special: url(soraSpecial), limited: url(soraLimited), wedding: url(soraWedding) },
+  miro: { profile: url(miroProfile), casual: url(miroCasual), special: url(miroSpecial), limited: url(miroLimited), wedding: url(miroWedding) },
+  yeoreum: { profile: url(yeoreumProfile), casual: url(yeoreumCasual), special: url(yeoreumSpecial), limited: url(yeoreumLimited), wedding: url(yeoreumWedding) },
+  bok: { profile: url(bokProfile), casual: url(bokCasual), special: url(bokSpecial), limited: url(bokLimited), wedding: url(bokWedding) },
+  minwon: { profile: url(minwonProfile), casual: url(minwonCasual), special: url(minwonSpecial), limited: url(minwonLimited), wedding: url(minwonWedding) },
+  nagyeong: { profile: url(nakyungProfile), casual: url(nakyungCasual), special: url(nakyungSpecial), limited: url(nakyungLimited), wedding: url(nagyeongWedding) },
+  dahae: { profile: url(dahaeProfile), casual: url(dahaeCasual), special: url(dahaeSpecial), limited: url(dahaeLimited), wedding: url(dahaeWedding) },
 };

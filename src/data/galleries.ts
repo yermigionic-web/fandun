@@ -1,4 +1,5 @@
 import { animalHuntersSrc, birthdayCafeSrc, magazineSrc, offRecordSrc, seoul1999Src } from "@/data/eventAssets";
+import { westernSrc, noirSrc } from "@/data/newGalleryImages";
 import type { Gallery } from "@/types";
 
 export const galleries: Gallery[] = [
@@ -51,6 +52,26 @@ export const galleries: Gallery[] = [
     mood: "polaroid",
     cover: birthdayCafeSrc.dahae,
     coverHunterId: "dahae",
+  },
+  {
+    id: "western-bounty",
+    title: "Western Bounty",
+    subtitle: "",
+    description: "",
+    badge: "NEW",
+    mood: "editorial",
+    cover: westernSrc.haesol,
+    coverHunterId: "haesol",
+  },
+  {
+    id: "noir-hunters",
+    title: "Noir Hunters",
+    subtitle: "",
+    description: "",
+    badge: "NEW",
+    mood: "editorial",
+    cover: noirSrc.haesol,
+    coverHunterId: "haesol",
   },
 ];
 

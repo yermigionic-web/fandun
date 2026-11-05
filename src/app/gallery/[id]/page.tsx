@@ -29,10 +29,10 @@ export default async function GalleryDetailPage({ params }: Props) {
   return (
     <PageShell>
       <Link href="/gallery" className="inline-flex min-h-11 items-center text-sm text-muted">
-        ← 50K Gallery
+        ← 100K Gallery
       </Link>
       <div className="mt-4">
-        <PageHeader eyebrow={gallery.badge ?? "50K"} title={gallery.title} description={`${gallery.subtitle} · ${gallery.description}`} />
+        <PageHeader eyebrow={gallery.badge ?? "100K"} title={gallery.title} description={[gallery.subtitle, gallery.description].filter(Boolean).join(" · ")} />
       </div>
       <GalleryBrowser gallery={gallery} items={items} />
     </PageShell>

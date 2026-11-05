@@ -1,4 +1,5 @@
 import { animalHuntersSrc, birthdayCafeSrc, magazineSrc, offRecordSrc, seoul1999Src } from "@/data/eventAssets";
+import { westernSrc, noirSrc } from "@/data/newGalleryImages";
 import type { Aspect, GalleryId, GalleryItem, HunterId } from "@/types";
 
 function item(
@@ -16,6 +17,25 @@ function item(
 }
 
 export const galleryItems: GalleryItem[] = [
+  item("western-haesol", "western-bounty", "haesol", "곽해솔", "", westernSrc.haesol, [], "portrait"),
+  item("western-dan", "western-bounty", "dan", "류단", "", westernSrc.dan, [], "portrait"),
+  item("western-sora", "western-bounty", "sora", "황보소라", "", westernSrc.sora, [], "portrait"),
+  item("western-miro", "western-bounty", "miro", "정미로", "", westernSrc.miro, [], "portrait"),
+  item("western-yeoreum", "western-bounty", "yeoreum", "차여름", "", westernSrc.yeoreum, [], "portrait"),
+  item("western-bok", "western-bounty", "bok", "박복", "", westernSrc.bok, [], "portrait"),
+  item("western-minwon", "western-bounty", "minwon", "강민원", "", westernSrc.minwon, [], "portrait"),
+  item("western-nagyeong", "western-bounty", "nagyeong", "선우나경", "", westernSrc.nagyeong, [], "portrait"),
+  item("western-dahae", "western-bounty", "dahae", "성다해", "", westernSrc.dahae, [], "portrait"),
+  item("noir-haesol", "noir-hunters", "haesol", "곽해솔", "", noirSrc.haesol, [], "portrait"),
+  item("noir-dan", "noir-hunters", "dan", "류단", "", noirSrc.dan, [], "portrait"),
+  item("noir-sora", "noir-hunters", "sora", "황보소라", "", noirSrc.sora, [], "portrait"),
+  item("noir-miro", "noir-hunters", "miro", "정미로", "", noirSrc.miro, [], "portrait"),
+  item("noir-yeoreum", "noir-hunters", "yeoreum", "차여름", "", noirSrc.yeoreum, [], "portrait"),
+  item("noir-bok", "noir-hunters", "bok", "박복", "", noirSrc.bok, [], "portrait"),
+  item("noir-minwon", "noir-hunters", "minwon", "강민원", "", noirSrc.minwon, [], "portrait"),
+  item("noir-nagyeong", "noir-hunters", "nagyeong", "선우나경", "", noirSrc.nagyeong, [], "portrait"),
+  item("noir-dahae", "noir-hunters", "dahae", "성다해", "", noirSrc.dahae, [], "portrait"),
+
   item(
     "poster-haesol",
     "hunter-posters",
