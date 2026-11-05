@@ -5,6 +5,7 @@ const pages = process.env.GITHUB_PAGES === "true";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  env: { NEXT_PUBLIC_SITE_BASE_PATH: pages ? "/fandun" : "" },
   images: {
     unoptimized: true,
   },
