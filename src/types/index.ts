@@ -18,6 +18,8 @@ export const galleryIds = [
   "another-seoul-1999",
   "off-the-record",
   "birthday-polaroids",
+  "western-bounty",
+  "noir-hunters",
 ] as const;
 
 export type GalleryId = (typeof galleryIds)[number];
@@ -128,7 +130,7 @@ export type BirthdayCafeEvent = {
   signedPolaroid?: string;
 };
 
-export type Rarity = "NORMAL" | "RARE" | "SPECIAL" | "50K LIMITED";
+export type Rarity = "NORMAL" | "RARE" | "SPECIAL" | "50K LIMITED" | "100K LIMITED";
 
 export type CardCollection =
   | "Profile"
@@ -137,7 +139,8 @@ export type CardCollection =
   | "SD Animal"
   | "1999"
   | "Birthday Polaroid"
-  | "Poster";
+  | "Poster"
+  | "Wedding";
 
 export type Photocard = {
   id: string;
