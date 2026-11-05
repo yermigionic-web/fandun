@@ -51,10 +51,10 @@ export function SiteHeader() {
         {navItems.map((item) => {
           const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
-                        item.href === "/pack" || item.href === "/binder" ? (
+            item.href === "/pack" || item.href === "/binder" ? (
               <a
                 key={item.href}
-                href={`${process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? ""}${item.href}/`}
+                href={`${process.env.SITE_BASE_PATH ?? ""}${item.href}/`}
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "nav-pill inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-3.5 text-[12px] font-semibold tracking-[0.08em]",
