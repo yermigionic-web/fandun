@@ -22,17 +22,26 @@ export function BinderGrid() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [flipped, setFlipped] = useState(false);
 
+  const sortedCards = useMemo(() => {
+    const hunterOrder = new Map(hunters.map((hunter, index) => [hunter.id, index]));
+    const rarityOrderIndex = new Map(rarityOrder.map((value, index) => [value, index]));
+    return [...photocards].sort((a, b) =>
+      (hunterOrder.get(a.hunterId) ?? Infinity) - (hunterOrder.get(b.hunterId) ?? Infinity) ||
+      (rarityOrderIndex.get(a.rarity) ?? Infinity) - (rarityOrderIndex.get(b.rarity) ?? Infinity)
+    );
+  }, []);
+
   const owned = useMemo(() => new Set(ids), [ids]);
   const filtered = useMemo(
     () =>
-      photocards.filter((card) => {
+      sortedCards.filter((card) => {
         const hunterOk = hunterId === "all" || card.hunterId === hunterId;
         const rarityOk = rarity === "all" || card.rarity === rarity;
         const collectionOk = collection === "all" || card.collection === collection;
         const ownedOk = !ownedOnly || owned.has(card.id);
         return hunterOk && rarityOk && collectionOk && ownedOk;
       }),
-    [collection, hunterId, owned, ownedOnly, rarity],
+    [collection, hunterId, owned, ownedOnly, rarity, sortedCards],
   );
 
   useEffect(() => {
