@@ -46,7 +46,7 @@ export function HeroSection() {
                   최애 고르기
                 </ButtonLink>
                 <ButtonLink href="/gallery" variant="ghost">
-                  50K 갤러리 입장
+                  100K 갤러리 입장
                 </ButtonLink>
                 <ButtonLink href="/pack" variant="soft">
                   포카 한 팩 열기
