@@ -25,8 +25,8 @@ export function HomeFeed() {
       <section className="py-14">
         <Container>
           <SectionHeading
-            eyebrow="50K SPECIAL"
-            title="다섯 개의 한정 아카이브"
+            eyebrow="100K GALLERY"
+            title="일곱 개의 한정 아카이브"
             action={
               <Link href="/gallery" className="inline-flex min-h-11 items-center text-sm font-semibold">
                 전체 보기
