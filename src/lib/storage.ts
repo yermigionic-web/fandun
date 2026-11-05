@@ -23,7 +23,13 @@ export function subscribeFavorite(onStoreChange: () => void) {
 }
 
 export function readBinder(): string[] {
-  const raw = localStorage.getItem(BINDER_KEY);
+  let raw: string | null;
+  try {
+    raw = localStorage.getItem(BINDER_KEY);
+  } catch {
+    // Keep the last valid snapshot when browser storage access is blocked.
+    return binderCache;
+  }
   if (binderReady && raw === binderRaw) return binderCache;
   binderReady = true;
   binderRaw = raw;
