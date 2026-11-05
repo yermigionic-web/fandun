@@ -284,15 +284,15 @@ export const photocards: Photocard[] = [
 
 // Wedding cards are available through Photo Pack at the 100K LIMITED tier.
 photocards.push(
-  card("pc-haesol-wedding", "haesol", "100K LIMITED", "Wedding", "곽해솔 — WEDDING", "", photocardSrc.haesol.wedding),
-  card("pc-dan-wedding", "dan", "100K LIMITED", "Wedding", "류단 — WEDDING", "", photocardSrc.dan.wedding),
-  card("pc-sora-wedding", "sora", "100K LIMITED", "Wedding", "황보소라 — WEDDING", "", photocardSrc.sora.wedding),
-  card("pc-miro-wedding", "miro", "100K LIMITED", "Wedding", "정미로 — WEDDING", "", photocardSrc.miro.wedding),
-  card("pc-yeoreum-wedding", "yeoreum", "100K LIMITED", "Wedding", "차여름 — WEDDING", "", photocardSrc.yeoreum.wedding),
-  card("pc-bok-wedding", "bok", "100K LIMITED", "Wedding", "박복 — WEDDING", "", photocardSrc.bok.wedding),
-  card("pc-minwon-wedding", "minwon", "100K LIMITED", "Wedding", "강민원 — WEDDING", "", photocardSrc.minwon.wedding),
-  card("pc-nagyeong-wedding", "nagyeong", "100K LIMITED", "Wedding", "선우나경 — WEDDING", "", photocardSrc.nagyeong.wedding),
-  card("pc-dahae-wedding", "dahae", "100K LIMITED", "Wedding", "성다해 — WEDDING", "", photocardSrc.dahae.wedding),
+  card("pc-haesol-wedding", "haesol", "100K LIMITED", "Wedding", "곽해솔 · The Secret Vow", "“나 오늘 진짜 예쁘지 ㅋㅋ 빨리 와서 반해랑 기다리다 목 빠진당”\n\n본식 20분 전, 대기실 문을 걸어 잠그고 거울 앞에서 찍어 보낸 셀카. 티아라와 드레스에 박힌 다이아몬드보다 더 반짝이는 건 왼손 약지에 끼운 결혼 반지다. 화려한 카메라 플래시와 쏟아지는 기자들의 질문 속에서도, 해솔의 시선 끝엔 언제나 네가 서 있어야 해.", photocardSrc.haesol.wedding),
+  card("pc-dan-wedding", "dan", "100K LIMITED", "Wedding", "류단 · Untied Ribbon", "“타이가 자꾸 삐뚤어져”\n\n피팅룸 구석에서 삐죽거리며 찍어 보낸 사진. 칼각 잡힌 제복과 전술 조끼만 입던 사람이, 풀려버린 보타이를 한 손에 쥐고 곤란한 듯 붉어진 귀 끝을 숨기지 못한다. 왼손 약지에 걸린 반지가 낯설면서도 좋은지 자꾸만 매만지는 중.", photocardSrc.dan.wedding),
+  card("pc-sora-wedding", "sora", "100K LIMITED", "Wedding", "황보소라 · Wildflower & Veil", "“바람 엄청 부네 면사포 다 날아가서 망했는데…… 그래도 좀 예뻐 보이나?”\n\n정형화된 부케 대신 손에 쥔 들꽃 한 줌과 햇살에 그을린 피부… 바람에 면사포를 쓸어 넘기는 손가락 위의 은반지. 형식적인 예식 따위는 아무래도 상관없어! 소라는 너와 둘이서 바다를 향해 내달릴 순간만을 손꼽아 기다리고 있다.", photocardSrc.sora.wedding),
+  card("pc-miro-wedding", "miro", "100K LIMITED", "Wedding", "정미로 · Behind the Curtain", "“문 열기 전에 먼저 보면 반칙인 거 아시죠… 이따 데리러 와요”\n\n어둠과 은밀함에 익숙한 탐색가답게, 세상에서 가장 환한 드레스를 입고도 커튼 틈새에 숨어 너를 놀려줄 궁리부터! 어떤 미로와 어둠 속에 갇혀도 서로를 놓치지 않겠다는 가장 단단한 길잡이 표식이다.", photocardSrc.miro.wedding),
+  card("pc-yeoreum-wedding", "yeoreum", "100K LIMITED", "Wedding", "차여름 · Off the Frames", "“안경 벗으니까 앞이 좀 흐릿하네요. 그러니까, 길잡이 손이 필요해요.”\n\n평소의 냉철한 손해사정사 과장님은 간데없고, 맑게 드러난 눈매와 부드러운 미소만 남아 있다. 견적서와 약관 대신 평생의 계약서를 품에 안은 날. 흐릿한 시야 속에서도 너의 위치만큼은 정확히 찾아낼 수 있어.", photocardSrc.yeoreum.wedding),
+  card("pc-bok-wedding", "bok", "100K LIMITED", "Wedding", "박복 · Lucky Sparkle", "“이거 진짜 우리 반지 맞지?! 나 오늘 장비 하나도 안 깨먹고 곱게 들어간다!”\n\n평생 기름때와 청테이프만 묻히고 살던 거친 손등 위에 얹어진 반짝이는 반지가 너무 눈부셔서 어쩔 줄을 모른다. 삐뚤어진 티아라와 상기된 두 뺨. 복이 인생 최고의 잭팟은 다른 무엇도 아닌 바로 너를 만난 그 순간!", photocardSrc.bok.wedding),
+  card("pc-minwon-wedding", "minwon", "100K LIMITED", "Wedding", "강민원 · The Officer's Oath", "“제 의지로 바치는 맹세입니다”\n\n반지에 조용히 입을 맞추는 경건함이 사진에 그대로 남아 있다. 평생을 국가와 매뉴얼, 통제선 안에서 살아온 현장통제관이 제 인생의 모든 주도권을 기꺼이 너에게 넘겨준 순간.", photocardSrc.minwon.wedding),
+  card("pc-nagyeong-wedding", "nagyeong", "100K LIMITED", "Wedding", "선우나경 · Under the Veil", "“당신과 사랑하게 된 건 기분 좋은 오차였어요.”\n\n흩날리는 자수 그림자 사이로 나경의 나른하고 우아한 미소가 번진다. 모든 작전과 전략을 완벽하게 통제하던 지략가가, 모든 방어를 내려놓고 네 품으로 향하는 취약하고 찬란한 찰나.", photocardSrc.nagyeong.wedding),
+  card("pc-dahae-wedding", "dahae", "100K LIMITED", "Wedding", "성다해 · 1 Minute Before", "“안 떨려요. 진짜예요. ……진짠데.”\n\n당당하게 웃어 보이지만 미숙함에 발갛게 달아오른 볼과 미세하게 떨리는 눈동자는 숨기지 못한다. 백 번도 연습한 각도로 네 손을 잡고, 버진로드를 향해 첫발을 내딛기 직전의 벅찬 설렘.", photocardSrc.dahae.wedding),
 );
 
 const weights: { rarity: Rarity; weight: number }[] = [
@@ -300,7 +300,7 @@ const weights: { rarity: Rarity; weight: number }[] = [
   { rarity: "RARE", weight: 30 },
   { rarity: "SPECIAL", weight: 15 },
   { rarity: "50K LIMITED", weight: 5 },
-  { rarity: "100K LIMITED", weight: 2 },
+  { rarity: "100K LIMITED", weight: 5 },
 ];
 
 export function drawPhotocard() {
