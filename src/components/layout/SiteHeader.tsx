@@ -54,7 +54,7 @@ export function SiteHeader() {
                         item.href === "/pack" || item.href === "/binder" ? (
               <a
                 key={item.href}
-                href={`/fandun${item.href}/`}
+                href={`${process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? ""}${item.href}/`}
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "nav-pill inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-3.5 text-[12px] font-semibold tracking-[0.08em]",
