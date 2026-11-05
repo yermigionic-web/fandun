@@ -36,21 +36,11 @@ export function ButtonLink({
   glow?: boolean;
   children: React.ReactNode;
 }) {
-  const useDocumentNavigation = href === "/pack" || href === "/binder";
-  return (
-    <Link
-      href={href}
-      prefetch={useDocumentNavigation ? false : undefined}
-      onClick={useDocumentNavigation ? (event) => {
-        // GitHub Pages can serve stale/missing Next.js RSC .txt payloads during client navigation.
-        // Full document navigation avoids relying on those payloads for collection pages.
-        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        window.location.assign(event.currentTarget.href);
-      } : undefined}
-      className={cn(base, variants[variant], glow && "magic-btn", className)}
-    >
-      {children}
-    </Link>
-  );
+  const classNames = cn(base, variants[variant], glow && "magic-btn", className);
+  // GitHub Pages serves pre-rendered HTML, while Next.js client navigation may request
+  // .txt RSC payloads. Use ordinary document navigation for pack/binder routes.
+  if (href === "/pack" || href === "/binder") {
+    return <a href={`/fandun${href}/`} className={classNames}>{children}</a>;
+  }
+  return <Link href={href} className={classNames}>{children}</Link>;
 }
