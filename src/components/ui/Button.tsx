@@ -40,7 +40,7 @@ export function ButtonLink({
   // GitHub Pages serves pre-rendered HTML, while Next.js client navigation may request
   // .txt RSC payloads. Use ordinary document navigation for pack/binder routes.
   if (href === "/pack" || href === "/binder") {
-    return <a href={`/fandun${href}/`} className={classNames}>{children}</a>;
+    return <a href={`${process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? ""}${href}/`} className={classNames}>{children}</a>;
   }
   return <Link href={href} className={classNames}>{children}</Link>;
 }
