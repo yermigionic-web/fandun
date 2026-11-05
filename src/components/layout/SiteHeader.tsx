@@ -51,24 +51,33 @@ export function SiteHeader() {
         {navItems.map((item) => {
           const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
-            <Link
-              key={item.href}
-              href={item.href}
-              prefetch={item.href === "/pack" || item.href === "/binder" ? false : undefined}
-              onClick={item.href === "/pack" || item.href === "/binder" ? (event) => {
-                if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-                event.preventDefault();
-                window.location.assign(event.currentTarget.href);
-              } : undefined}
-              aria-current={active ? "page" : undefined}
-              className={cn(
-                "nav-pill inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-3.5 text-[12px] font-semibold tracking-[0.08em]",
-                active ? "text-ink" : "text-muted hover:bg-white/70",
-              )}
-            >
-              {active ? <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_var(--theme-glow)]" /> : null}
-              {item.label}
-            </Link>
+                        item.href === "/pack" || item.href === "/binder" ? (
+              <a
+                key={item.href}
+                href={`/fandun${item.href}/`}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "nav-pill inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-3.5 text-[12px] font-semibold tracking-[0.08em]",
+                  active ? "text-ink" : "text-muted hover:bg-white/70",
+                )}
+              >
+                {active ? <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_var(--theme-glow)]" /> : null}
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "nav-pill inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-3.5 text-[12px] font-semibold tracking-[0.08em]",
+                  active ? "text-ink" : "text-muted hover:bg-white/70",
+                )}
+              >
+                {active ? <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_var(--theme-glow)]" /> : null}
+                {item.label}
+              </Link>
+            )
           );
         })}
       </nav>
