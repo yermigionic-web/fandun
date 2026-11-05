@@ -282,11 +282,25 @@ export const photocards: Photocard[] = [
   ),
 ];
 
+// Wedding cards are available through Photo Pack at the 100K LIMITED tier.
+photocards.push(
+  card("pc-haesol-wedding", "haesol", "100K LIMITED", "Wedding", "곽해솔 — WEDDING", "", photocardSrc.haesol.wedding),
+  card("pc-dan-wedding", "dan", "100K LIMITED", "Wedding", "류단 — WEDDING", "", photocardSrc.dan.wedding),
+  card("pc-sora-wedding", "sora", "100K LIMITED", "Wedding", "황보소라 — WEDDING", "", photocardSrc.sora.wedding),
+  card("pc-miro-wedding", "miro", "100K LIMITED", "Wedding", "정미로 — WEDDING", "", photocardSrc.miro.wedding),
+  card("pc-yeoreum-wedding", "yeoreum", "100K LIMITED", "Wedding", "차여름 — WEDDING", "", photocardSrc.yeoreum.wedding),
+  card("pc-bok-wedding", "bok", "100K LIMITED", "Wedding", "박복 — WEDDING", "", photocardSrc.bok.wedding),
+  card("pc-minwon-wedding", "minwon", "100K LIMITED", "Wedding", "강민원 — WEDDING", "", photocardSrc.minwon.wedding),
+  card("pc-nagyeong-wedding", "nagyeong", "100K LIMITED", "Wedding", "선우나경 — WEDDING", "", photocardSrc.nagyeong.wedding),
+  card("pc-dahae-wedding", "dahae", "100K LIMITED", "Wedding", "성다해 — WEDDING", "", photocardSrc.dahae.wedding),
+);
+
 const weights: { rarity: Rarity; weight: number }[] = [
   { rarity: "NORMAL", weight: 50 },
   { rarity: "RARE", weight: 30 },
   { rarity: "SPECIAL", weight: 15 },
   { rarity: "50K LIMITED", weight: 5 },
+  { rarity: "100K LIMITED", weight: 2 },
 ];
 
 export function drawPhotocard() {
@@ -309,7 +323,7 @@ export function getCardsByHunter(id: HunterId) {
   return photocards.filter((entry) => entry.hunterId === id);
 }
 
-export const rarityOrder: Rarity[] = ["NORMAL", "RARE", "SPECIAL", "50K LIMITED"];
+export const rarityOrder: Rarity[] = ["NORMAL", "RARE", "SPECIAL", "50K LIMITED", "100K LIMITED"];
 
 export const collectionOrder: CardCollection[] = [
   "Profile",
@@ -319,4 +333,5 @@ export const collectionOrder: CardCollection[] = [
   "1999",
   "Birthday Polaroid",
   "Poster",
+  "Wedding",
 ];
